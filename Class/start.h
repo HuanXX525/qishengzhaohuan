@@ -1,0 +1,1 @@
+void welcome(void);//启动界面；无

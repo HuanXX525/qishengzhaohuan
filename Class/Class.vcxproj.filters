@@ -18,10 +18,22 @@
     <ClInclude Include="color.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="console_ctrl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="start.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="console_ctrl.cpp">
+      <Filter>头文件</Filter>
+    </ClCompile>
+    <ClCompile Include="start.cpp">
+      <Filter>头文件</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
