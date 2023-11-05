@@ -3,7 +3,15 @@
 #include<stdlib.h>//清屏函数
 #include<math.h>
 #include<time.h>
-void login_register(char l_account[]);
+#include"console_ctrl.h"
+#include<string>
+using namespace std;
+class Account {//账户类
+	string account;//账号
+	string password;//密码
+};
+
+void printloginui(void);
 //int login(char chin_a[]);
 //void Register();
 //void input_k1(char a[], char b[]);

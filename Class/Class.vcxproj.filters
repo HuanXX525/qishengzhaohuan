@@ -48,4 +48,12 @@
       <Filter>头文件</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="logo.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="login.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+  </ItemGroup>
 </Project>

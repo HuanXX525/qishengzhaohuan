@@ -88,8 +88,8 @@ void Character::changeshield(short increase,AttackInfo info) {//!!!!!!!
 		shield.setnum(-info.getattacknum());
 		if (getshield().getnum() < 0) {
 			getshield().setnum(0);
-			Element e = { 0,0 };
-			getshield().setelement(e);
+			//Element e = { 0,0 };
+			//getshield().setelement(e);
 		}
 	}
 	
