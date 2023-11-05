@@ -11,3 +11,14 @@ void tomiddle(int len)
 	pos.Y = info.dwCursorPosition.Y;
 	SetConsoleCursorPosition(hout, pos);//设置光标位置
 }
+
+void gotoxy(int x, int y)
+{
+	HANDLE hout = GetStdHandle(STD_OUTPUT_HANDLE);//获取当前窗口句柄
+	COORD pos;//位置结构体，设置坐标的函数要用
+	pos.X = x;
+	pos.Y = y;
+	SetConsoleCursorPosition(hout, pos);//设置光标位置
+}
+
+

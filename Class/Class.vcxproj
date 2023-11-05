@@ -127,12 +127,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="class.h" />
     <ClInclude Include="color.h" />
     <ClInclude Include="console_ctrl.h" />
+    <ClInclude Include="login.h" />
     <ClInclude Include="start.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="class.cpp" />
     <ClCompile Include="console_ctrl.cpp" />
+    <ClCompile Include="login.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="start.cpp" />
   </ItemGroup>

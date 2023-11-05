@@ -24,6 +24,12 @@
     <ClInclude Include="start.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="class.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="login.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -33,6 +39,12 @@
       <Filter>头文件</Filter>
     </ClCompile>
     <ClCompile Include="start.cpp">
+      <Filter>头文件</Filter>
+    </ClCompile>
+    <ClCompile Include="class.cpp">
+      <Filter>头文件</Filter>
+    </ClCompile>
+    <ClCompile Include="login.cpp">
       <Filter>头文件</Filter>
     </ClCompile>
   </ItemGroup>
