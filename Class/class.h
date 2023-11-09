@@ -4,7 +4,19 @@ using namespace std;
 enum ELEMENT { null, wind, rock, thunder, grass, water, fire, ice };//定义七元素的枚举类型
 
 class Character;
-
+class Box {//框；位置，大小，是否被激活
+private:
+	bool active=0;
+public:
+	short x;
+	short y;
+	short width;
+	short height;
+	Box(short a, short b, short c, short d);
+	void print();//打印框架
+	void toactive();
+	void unactive();
+};
 
 class Element {//元素类；元素类型，元素强度
 private:
@@ -107,4 +119,26 @@ public:
 	void changelement(Element element);//改变元素附着
 	Element getelement(void);//获取元素附着
 	string getname(void);//获取元素附着
+};
+
+class Position {//位置类；x坐标，y坐标
+private:
+	short x;
+	short y;
+public:
+	short getx(void);//获取x坐标
+	short gety(void);//获取y坐标
+};
+
+class UI {//UI类；UI名称，UI位置，标识关键字，详细描述
+private:
+	string name;//UI名
+	Position positon;//位置
+	short key;//关键字标识是哪个
+	string info;//描述
+public:
+	string getname(void);
+	Position getposition(void);
+	short getkey(void);
+	string getinfo(void);
 };

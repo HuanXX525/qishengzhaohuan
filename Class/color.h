@@ -1,5 +1,6 @@
 #define COLOR1(msg,r,g,b,bg) "\033[38;2;" #r";" #g";" #b";" #bg"m" msg"\033[0m"//定义高级前景色和简单背景色；恢复默认
 #define COLORS(r,g,b,bg) "\033[5;38;2;" #r";" #g";" #b";" #bg"m"//定义高级前景色和简单背景色；不恢复默认
+#define BG(r,g,b) "\033[48;2;" #r";" #g";" #b"m"
 #define COLOR(r,g,b,bg) "\033[0;38;2;" #r";" #g";" #b";" #bg"m"//定义高级前景色和简单背景色；不恢复默认
 #define WIND1(msg) COLOR(msg,53,150,151,48)//风元素颜色
 #define ROCK1(msg) COLOR(msg,222,189,108,48)//岩元素颜色
