@@ -27,7 +27,7 @@
     <ClInclude Include="class.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="login.h">
+    <ClInclude Include="classnew.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -42,9 +42,6 @@
       <Filter>头文件</Filter>
     </ClCompile>
     <ClCompile Include="class.cpp">
-      <Filter>头文件</Filter>
-    </ClCompile>
-    <ClCompile Include="login.cpp">
       <Filter>头文件</Filter>
     </ClCompile>
   </ItemGroup>

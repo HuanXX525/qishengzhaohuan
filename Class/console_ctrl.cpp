@@ -1,6 +1,5 @@
 #include "console_ctrl.h"
 
-
 void tomiddle(int len)
 {
 	HANDLE hout = GetStdHandle(STD_OUTPUT_HANDLE);//获取当前窗口句柄
@@ -20,12 +19,12 @@ void currentmove(int x, int y) {
 	pos.Y = info.dwCursorPosition.Y + y;
 	SetConsoleCursorPosition(hout, pos);//设置光标位置
 }
-void getxy(short& x, short& y) {
+void getxy(position& p) {
 	HANDLE hout = GetStdHandle(STD_OUTPUT_HANDLE);//获取当前窗口句柄
 	CONSOLE_SCREEN_BUFFER_INFO info;//储存窗口信息的结构体
 	GetConsoleScreenBufferInfo(hout, &info);//获取窗口信息
-	x = info.dwCursorPosition.X;
-	y = info.dwCursorPosition.Y;
+	p.x = info.dwCursorPosition.X;
+	p.y = info.dwCursorPosition.Y;
 };
 void gotoxy(int x, int y)
 {
@@ -35,5 +34,10 @@ void gotoxy(int x, int y)
 	pos.Y = y;
 	SetConsoleCursorPosition(hout, pos);//设置光标位置
 }
-
-
+void getsize(position& p) {
+	HANDLE hout = GetStdHandle(STD_OUTPUT_HANDLE);//获取当前窗口句柄
+	CONSOLE_SCREEN_BUFFER_INFO info;//储存窗口信息的结构体
+	GetConsoleScreenBufferInfo(hout, &info);//获取窗口信息
+	p.x = info.dwSize.X;
+	p.y = info.dwSize.Y;
+}

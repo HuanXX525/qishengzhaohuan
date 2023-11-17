@@ -28,22 +28,22 @@ void printlogo(void)//打印七圣召唤LOGO
 	string line;
 	short len = 114;
 	tomiddle(len);
-	short x, y;
-	getxy(x, y);
+	position p;
+	getxy(p);
 	for (int j = 0; j < 5; j++) {
-		gotoxy(x, j);
+		gotoxy(p.x, j);
 		getline(infile, line);
 		cout << ROCK << line;
 	}
-	getxy(x, y);
+	getxy(p);
 	for (int j = 0; j < 5; j++) {
-		gotoxy(x, j);
+		gotoxy(p.x, j);
 		getline(infile, line);
 		cout << FIRE << line;
 	}
-	getxy(x, y);
+	getxy(p);
 	for (int j = 0; j < 5; j++) {
-		gotoxy(x, j);
+		gotoxy(p.x, j);
 		getline(infile, line);
 		cout << BLUE << line;
 	}
@@ -57,19 +57,19 @@ void printlogin(void) {
 	string line;
 	short len = 42;
 	tomiddle(len);
-	short x, y;
-	getxy(x, y);
+	position p;
+	getxy(p);
 	for (int j = 0; getline(infile, line); j++) {
-		gotoxy(x, j+y);
+		gotoxy(p.x, j+p.y);
 		//getline(infile, line);
 		cout  << line;
 	}
 	infile.close();
 	//以上为输出UI
-	account(x + 8, y+4);//账户输入框的位置
+	account(p.x + 8, p.y+4);//账户输入框的位置
 	//gotoxy(x, y + 4);//密码输入在账户下面4格
 	char arr[21];//最长20位密码
-	input_k(arr,x+8,y+8);
+	input_k(arr,p.x+8,p.y+8);
 	string password;
 	password = arr;
 	currentmove(0, 7);

@@ -3,7 +3,6 @@
 using namespace std;
 enum ELEMENT { null, wind, rock, thunder, grass, water, fire, ice };//定义七元素的枚举类型
 
-class Character;
 class Box {//框；位置，大小，是否被激活
 private:
 	bool active=0;
@@ -94,17 +93,19 @@ public:
 class Character {//角色类；血量，护盾量，武器，物品，普通攻击，元素战技，元素爆发，元素附着，食用状态
 private:
 	string name;//姓名
-	short hitpoint = 10;//血量
+	short hitpoint;//血量
 	Shield shield;//护盾
-	Weapon weaponcard;//武器卡
-	Items itemscard;//物品卡
-	//short itemsnum;//物品卡的数量
-	Attack attack1;//普通攻击
-	Attack attack2;//元素战技
-	Attack attack3;//元素爆发
+	short attack;
+	Element element;//元素附着
 	Element elementattach;//元素附着
-	bool eatfood = 0;//是否食用食物
-	FoodEffect foodeffect;//食物效果，目前是加攻
+	bool eatfood;//是否食用食物
+	//Weapon weaponcard;//武器卡
+	//Items itemscard;//物品卡
+	//short itemsnum;//物品卡的数量
+	//Attack attack1;//普通攻击
+	//Attack attack2;//元素战技
+	//Attack attack3;//元素爆发
+	//FoodEffect foodeffect;//食物效果，目前是加攻
 public:
 	virtual AttackInfo attack(short type);//攻击
 	void attacked(AttackInfo info);//被攻击
